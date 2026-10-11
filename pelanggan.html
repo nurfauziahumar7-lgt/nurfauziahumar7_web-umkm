@@ -84,34 +84,6 @@
     <!-- Daftar Pelanggan -->
     <div class="container" id="daftarPelanggan"></div>
 
-    <!-- Popup Instagram -->
-    <div class="instagram-popup" id="instagramPopup">
-        <div class="instagram-box">
-
-            <h2>📩 Pesan untuk Penjual</h2>
-
-            <p id="keteranganPesan">
-                Pesan pesanan sudah dibuat otomatis.
-            </p>
-
-            <textarea id="templatePesan" readonly></textarea>
-
-            <div class="popup-buttons">
-                <button class="copy-btn" id="copyPesan">
-                    📋 Salin Pesan
-                </button>
-
-                <button class="open-instagram-btn" id="bukaInstagram">
-                    📩 Buka Instagram
-                </button>
-            </div>
-
-            <button class="close-popup" id="tutupPopup">
-                Tutup
-            </button>
-        </div>
-    </div>
-
     <!-- Footer -->
     <footer>
         © 2026 Martabak & Terang Bulan APPA
@@ -220,13 +192,6 @@
                                         </span>
                                     </div>
 
-                                    <button
-                                        class="instagram-btn"
-                                        data-id="${pelanggan.id}"
-                                    >
-                                        📩 Chat Penjual via Instagram
-                                    </button>
-
                                     ${tombolSelesai}
 
                                     <button
@@ -295,124 +260,6 @@
                 $(this).removeClass("disorot");
             }
         );
-
-        // Membuat pesan pesanan untuk Instagram
-        $("#daftarPelanggan").on(
-            "click",
-            ".instagram-btn",
-            function() {
-                const id = Number($(this).data("id"));
-
-                const pelanggan = dataPelanggan.find(function(item) {
-                    return Number(item.id) === id;
-                });
-
-                if (!pelanggan) {
-                    alert("Data pelanggan tidak ditemukan.");
-                    return;
-                }
-
-                let pesan =
-                    "Halo Kak, saya " +
-                    pelanggan.nama +
-                    ".\n\n" +
-                    "Saya ingin memesan:\n\n";
-
-                $.each(pelanggan.pesanan || [], function(_, item) {
-                    let subtotal =
-                        Number(item.harga) * Number(item.jumlah);
-
-                    pesan +=
-                        "• " +
-                        item.nama +
-                        " × " +
-                        item.jumlah +
-                        " = Rp" +
-                        subtotal.toLocaleString("id-ID") +
-                        "\n";
-                });
-
-                pesan +=
-                    "\nTOTAL: Rp" +
-                    Number(pelanggan.total).toLocaleString("id-ID") +
-                    "\n\n" +
-                    "Mohon diproses ya Kak. Terima kasih 😊";
-
-                $("#templatePesan").val(pesan);
-
-                $("#keteranganPesan").text(
-                    "Pesanan " +
-                    pelanggan.nama +
-                    " sudah dibuat otomatis."
-                );
-
-                $("#instagramPopup")
-                    .css("display", "flex")
-                    .hide()
-                    .fadeIn(250);
-            }
-        );
-
-        // Menyalin pesan
-        $("#copyPesan").on("click", function() {
-            let pesan = $("#templatePesan").val();
-
-            if (navigator.clipboard && window.isSecureContext) {
-                navigator.clipboard
-                    .writeText(pesan)
-                    .then(function() {
-                        alert(
-                            "✅ Pesan berhasil disalin!\n\n" +
-                            "Sekarang buka Instagram dan paste pesan tersebut."
-                        );
-                    })
-                    .catch(function() {
-                        salinCadangan();
-                    });
-            } else {
-                salinCadangan();
-            }
-        });
-
-        // Cara cadangan untuk menyalin pesan
-        function salinCadangan() {
-            const $textarea = $("<textarea>")
-                .val($("#templatePesan").val())
-                .appendTo("body")
-                .select();
-
-            document.execCommand("copy");
-            $textarea.remove();
-
-            alert(
-                "✅ Pesan berhasil disalin!\n\n" +
-                "Sekarang buka Instagram dan paste pesan tersebut."
-            );
-        }
-
-        // Membuka Instagram
-        $("#bukaInstagram").on("click", function() {
-            window.open(
-                "https://www.instagram.com/appa.martebul/",
-                "_blank"
-            );
-        });
-
-        // Menutup popup
-        $("#tutupPopup").on("click", function() {
-            $("#instagramPopup")
-                .stop(true, true)
-                .fadeOut(200);
-        });
-
-        // Menutup popup saat bagian luar diklik
-        $("#instagramPopup").on("click", function(event) {
-            if (event.target === this) {
-                $(this)
-                    .stop(true, true)
-                    .fadeOut(200);
-            }
-        });
 
         // Menandai pesanan selesai
         $("#daftarPelanggan").on(
