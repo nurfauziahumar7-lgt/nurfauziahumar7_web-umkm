@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Martabak & Terang Bulan APPA- Home</title>
+
+    <!-- Bootstrap 5.3.8 -->
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+        crossorigin="anonymous"
+    >
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Navbar -->
+<nav class="navbar navbar-expand-lg">
+    <div class="container-fluid nav-container">
+
+        <div class="logo">
+            <img src="logo APPA.png" alt="Logo APPA">
+            <span>Martabak & Terang Bulan APPA</span>
+        </div>
+
+        <!-- Bootstrap Navbar Toggle -->
+        <button class="navbar-toggler" type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbarNav"
+                aria-controls="navbarNav"
+                aria-expanded="false"
+                aria-label="Toggle navigation">
+
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+
+            <ul class="navbar-nav gap-lg-2">
+
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link page-link"> Home</a>
+                </li>
+
+                <li class="nav-item">
+                    <a href="menu.html" class="nav-link page-link"> Menu</a>
+                </li>
+
+                <li class="nav-item">
+                    <a href="pesan.html" class="nav-link page-link"> Pesan</a>
+                </li>
+
+                <li class="nav-item">
+                    <a href="pelanggan.html" class="nav-link page-link"> Pelanggan</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+    <!-- Home -->
+    <section class="hero">
+        <div class="hero-content">
+
+            <!-- Logo APPA -->
+            <div class="hero-icon" id="heroIcon">
+                <img src="logo APPA.png" alt="Logo APPA">
+            </div>
+
+            <h1>Martabak & Terang Bulan APPA</h1>
+
+            <h2 id="slogan">
+                Gurihnya Nagih, Manisnya Bikin Bahagia!
+            </h2>
+
+            <p>
+                Nikmati berbagai pilihan Terang Bulan
+                dan Martabak dengan berbagai rasa
+                dan topping pilihan
+            </p>
+
+            <p>
+                Jam Operasional<br>
+                Senin - Minggu<br>
+                17.00 - 22.00<br>
+                Jl. Poros Abdesir (dekat pertamina)<br>
+            </p>
+
+            <a href="menu.html" class="btn">
+                🥞 Lihat Menu
+            </a>
+
+            <a href="pesan.html" class="btn">
+                🛒 Lihat Pesanan
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2026 Martabak & Terang Bulan APPA</p>
+    </footer>
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+    <!-- Implementasi jQuery -->
+    <script>
+        $(function () {
+            $("#heroIcon").on("click", function () {
+                $("#slogan").text("Sekali Coba, Pasti Mau Lagi!");
+            });
+        });
+    </script>
+
+    <!-- Bootstrap JavaScript -->
+    <script
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYWjRrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous">
+    </script>
+</body>
+</html>

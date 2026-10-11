@@ -1,0 +1,577 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #fff8ef;
+    color: #3b2115;
+}
+
+/* NAVBAR */
+
+nav.navbar {
+    background: #3b2115 !important;
+    padding: 10px 4%;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar .container {
+    max-width: 1200px;
+    width: 90%;
+}
+
+/* Logo dan nama APPA */
+
+.navbar .logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #f6c94c;
+    font-size: 20px;
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+.navbar .logo img {
+    width: 55px !important;
+    height: 55px !important;
+    max-width: 55px !important;
+    max-height: 55px !important;
+    object-fit: contain;
+}
+
+/* Menu navbar */
+
+.navbar .navbar-nav {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.navbar .nav-link {
+    color: white !important;
+    font-weight: bold;
+    padding: 9px 15px !important;
+    border-radius: 22px;
+}
+
+.navbar .nav-link:hover,
+.navbar .nav-link.active {
+    color: #3b2115 !important;
+    background: #f6c94c;
+}
+
+/* Tombol navbar saat HP */
+
+.navbar-toggler {
+    border: 1px solid #f6c94c !important;
+}
+
+.navbar-toggler:focus {
+    box-shadow: 0 0 0 2px rgba(246, 201, 76, 0.3);
+}
+
+.navbar-toggler-icon {
+    filter: brightness(0) invert(1);
+}
+
+/* HERO */
+
+.hero {
+    min-height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 30px 20px;
+    background: linear-gradient(
+        rgba(55, 30, 17, 0.9),
+        rgba(55, 30, 17, 0.9)
+    );
+    color: white;
+}
+
+.hero-content {
+    max-width: 800px;
+}
+
+.hero-icon {
+    width: 280px;
+    height: 280px;
+    margin: 0 auto 10px;
+    cursor: pointer;
+}
+
+.hero-icon img {
+    width: 280px !important;
+    height: 280px !important;
+    max-width: 280px !important;
+    max-height: 280px !important;
+    object-fit: contain;
+    display: block;
+    margin: 0 auto;
+}
+
+.hero h1 {
+    color: #f6c94c;
+    font-size: 55px;
+    margin-bottom: 15px;
+}
+
+.hero h2 {
+    font-size: 25px;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 18px;
+    line-height: 1.8;
+    margin-bottom: 30px;
+}
+
+/* BUTTON */
+
+.btn {
+    background: #f6c94c;
+    color: #3b2115;
+    border-radius: 30px;
+    font-weight: bold;
+}
+
+.btn:hover {
+    background: #ffd966;
+}
+
+/* HEADER */
+
+.header {
+    text-align: center;
+    padding: 50px 20px 30px;
+}
+
+.header h1 {
+    font-size: 40px;
+    color: #4b260f;
+}
+
+.header p {
+    margin-top: 10px;
+    color: #76543d;
+}
+
+/* MENU */
+
+.menu-section {
+    width: 90%;
+    max-width: 1100px;
+    margin: 30px auto 60px;
+}
+
+.section-title {
+    font-size: 30px;
+    margin-bottom: 25px;
+    border-left: 7px solid #ffd04a;
+    padding-left: 15px;
+    cursor: pointer;
+}
+
+.menu-image {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 25px;
+}
+
+.menu-image img {
+    width: 50%;
+    max-width: 450px;
+    height: auto;
+    border-radius: 18px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.12);
+}
+
+.category-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.category {
+    background: white;
+    padding: 25px;
+    border-radius: 18px;
+    border: 1px solid #ead8c4;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+}
+
+.category h3 {
+    font-size: 21px;
+    margin-bottom: 10px;
+}
+
+.category p {
+    color: #76543d;
+    margin-bottom: 15px;
+}
+
+.category button {
+    width: 100%;
+    border: none;
+    background: #ffd04a;
+    color: #3d2112;
+    padding: 12px;
+    border-radius: 25px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.category button:hover {
+    background: #f0b800;
+}
+
+/* DETAIL MENU */
+
+.detail {
+    display: none;
+    margin-top: 30px;
+    background: white;
+    padding: 25px;
+    border-radius: 18px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+.menu-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+}
+
+.menu-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 13px;
+    border-bottom: 1px solid #ead8c4;
+}
+
+.menu-item span {
+    font-weight: bold;
+}
+
+.menu-item button {
+    border: none;
+    background: #ffd04a;
+    padding: 8px 15px;
+    border-radius: 20px;
+    font-weight: bold;
+}
+
+/* PESANAN */
+
+.pesanan {
+    position: fixed;
+    right: 25px;
+    bottom: 25px;
+    background: #4b260f;
+    color: white;
+    padding: 14px 20px;
+    border-radius: 30px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.pesanan a {
+    color: #ffd04a;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* CONTAINER */
+
+.container {
+    width: 90%;
+    max-width: 1000px;
+    margin: auto;
+}
+
+/* PELANGGAN */
+
+.pelanggan-card {
+    background: white;
+    padding: 25px;
+    margin-bottom: 20px;
+    border-radius: 18px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+}
+
+.pelanggan-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #ead8c4;
+    padding-bottom: 15px;
+    margin-bottom: 15px;
+}
+
+.status {
+    padding: 8px 15px;
+    border-radius: 20px;
+    background: #fff0bd;
+    color: #805b00;
+    font-weight: bold;
+}
+
+.status.selesai {
+    background: #d8f3dc;
+    color: #26733b;
+}
+
+.item {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 0;
+    color: #65442e;
+}
+
+.pelanggan-card .total {
+    border-top: 2px solid #ffd04a;
+    margin-top: 15px;
+    padding-top: 15px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/* TOMBOL PELANGGAN */
+
+.selesai-btn {
+    width: 100%;
+    margin-top: 20px;
+    border: none;
+    padding: 13px;
+    border-radius: 25px;
+    background: #ffd04a;
+    color: #3d2112;
+    font-weight: bold;
+}
+
+.hapus-btn {
+    width: 100%;
+    margin-top: 10px;
+    border: none;
+    padding: 11px;
+    border-radius: 25px;
+    background: #8b2e2e;
+    color: white;
+    font-weight: bold;
+}
+
+/* PENCARIAN */
+
+.pencarian-pelanggan {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto 25px;
+}
+
+.pencarian-pelanggan input {
+    width: 100%;
+    padding: 14px 18px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    font-size: 16px;
+}
+
+.pencarian-pelanggan input:focus {
+    border-color: #f6c94c;
+    box-shadow: 0 0 0 3px rgba(246, 201, 76, 0.2);
+    outline: none;
+}
+
+/* PESAN */
+
+.nama-pelanggan {
+    margin-bottom: 25px;
+}
+
+.nama-pelanggan label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.nama-pelanggan input {
+    width: 100%;
+    padding: 13px;
+    border: 1px solid #d8c1a8;
+    border-radius: 10px;
+    font-size: 16px;
+}
+
+.order-item {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    gap: 15px;
+    align-items: center;
+    padding: 18px 0;
+    border-bottom: 1px solid #ead8c4;
+}
+
+.harga {
+    color: #a65d00;
+    font-weight: bold;
+}
+
+.jumlah {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.jumlah button {
+    width: 30px;
+    height: 30px;
+    border: none;
+    border-radius: 50%;
+    background: #ffd04a;
+    font-weight: bold;
+}
+
+.hapus {
+    border: none;
+    background: #8b2e2e;
+    color: white;
+    padding: 8px 13px;
+    border-radius: 20px;
+}
+
+/* TOTAL */
+
+.container > .total {
+    display: flex;
+    justify-content: space-between;
+    border-top: 3px solid #ffd04a;
+    margin-top: 25px;
+    padding-top: 20px;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.simpan {
+    width: 100%;
+    margin-top: 25px;
+    padding: 15px;
+    border: none;
+    border-radius: 30px;
+    background: #ffd04a;
+    color: #3d2112;
+    font-size: 17px;
+    font-weight: bold;
+}
+
+/* KOSONG */
+
+#daftarPesanan .kosong,
+#daftarPelanggan .kosong {
+    text-align: center;
+    padding: 40px;
+}
+
+/* FOOTER */
+
+footer {
+    margin-top: 60px;
+    background: #4b260f;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+/* ANIMASI */
+
+.category,
+.pelanggan-card,
+.btn,
+.simpan {
+    transition: 0.3s;
+}
+
+.category:hover,
+.pelanggan-card:hover {
+    transform: translateY(-3px);
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 991px) {
+
+    .navbar .navbar-brand {
+        font-size: 20px;
+    }
+
+    .navbar .navbar-brand img {
+        width: 45px;
+        height: 45px;
+    }
+
+    .navbar .navbar-collapse {
+        background: #3b2115;
+        margin-top: 10px;
+        padding: 10px;
+        border-radius: 10px;
+    }
+
+    .navbar .nav-link {
+        text-align: center;
+    }
+}
+
+@media (max-width: 800px) {
+
+    .category-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .menu-list {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 700px) {
+
+    .hero h1 {
+        font-size: 38px;
+    }
+
+    .hero h2 {
+        font-size: 20px;
+    }
+
+    .hero p {
+        font-size: 16px;
+    }
+
+    .order-item {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 500px) {
+
+    .navbar .navbar-brand {
+        font-size: 17px;
+    }
+
+    .category-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .menu-image img {
+        width: 90%;
+    }
+}

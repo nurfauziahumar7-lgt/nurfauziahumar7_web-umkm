@@ -1,0 +1,603 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Martabak & Terang Bulan APPA - Menu</title>
+
+    <!-- Bootstrap 5.3.8 -->
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+        crossorigin="anonymous"
+    >
+
+    <!-- Menghubungkan CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid nav-container">
+
+            <div class="logo">
+                <img src="logo APPA.png" alt="Logo APPA">
+                <span>Martabak & Terang Bulan APPA</span>
+            </div>
+
+            <!-- Bootstrap Navbar Toggle -->
+            <button
+                class="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbarNav"
+                aria-controls="navbarNav"
+                aria-expanded="false"
+                aria-label="Toggle navigation"
+            >
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav gap-lg-2">
+
+                    <li class="nav-item">
+                        <a href="index.html" class="nav-link page-link">Home</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="menu.html" class="nav-link page-link">Menu</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="pesan.html" class="nav-link page-link">Pesan</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="pelanggan.html" class="nav-link page-link">Pelanggan</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HEADER -->
+    <div class="header">
+        <h1>🥞 DAFTAR MENU</h1>
+        <p>Pilih kategori menu yang tersedia</p>
+    </div>
+
+    <!-- TERANG BULAN -->
+    <section class="menu-section">
+
+        <h2 class="section-title">TERANG BULAN APPA</h2>
+
+        <div class="menu-image">
+            <img src="TerangBulanAPPA.png" alt="Terang Bulan APPA">
+        </div>
+
+        <div class="adonan">
+            <h3>Pilih Adonan Terang Bulan</h3>
+
+            <label>
+                <input type="radio" name="adonan" value="Original">
+                Original
+            </label>
+
+            <label>
+                <input type="radio" name="adonan" value="Brownies">
+                Brownies
+            </label>
+
+            <label>
+                <input type="radio" name="adonan" value="Red Velvet">
+                Red Velvet
+            </label>
+
+            <label>
+                <input type="radio" name="adonan" value="Pandan">
+                Pandan
+            </label>
+        </div>
+
+        <div class="category-grid">
+
+            <div class="category">
+                <h3>🍫 1 Rasa</h3>
+                <p>Rp25.000 - Rp28.000</p>
+
+                <button onclick="tampilkan('satuRasa')">
+                    Lihat Pilihan
+                </button>
+            </div>
+
+            <div class="category">
+                <h3>🥜 Kombinasi</h3>
+                <p>Rp30.000 - Rp33.000</p>
+
+                <button onclick="tampilkan('kombinasi')">
+                    Lihat Pilihan
+                </button>
+            </div>
+
+            <div class="category">
+                <h3>⭐ Spesial</h3>
+                <p>Rp33.000 - Rp38.000</p>
+
+                <button onclick="tampilkan('spesial')">
+                    Lihat Pilihan
+                </button>
+            </div>
+        </div>
+
+        <div class="detail" id="detailTerang">
+            <h2 id="judulTerang"></h2>
+
+            <div class="menu-list" id="listTerang"></div>
+        </div>
+    </section>
+
+    <!-- MARTABAK -->
+    <section class="menu-section">
+
+        <h2 class="section-title">Martabak APPA</h2>
+
+        <div class="menu-image">
+            <img src="MartabakAPPA.png" alt="Martabak APPA">
+        </div>
+
+        <div class="category-grid">
+
+            <div class="category">
+                <h3>🥩 Special Daging</h3>
+                <p>Rp20.000 - Rp25.000</p>
+
+                <button onclick="tampilkanMartabak('special')">
+                    Lihat Pilihan
+                </button>
+            </div>
+
+            <div class="category">
+                <h3>🥩 Istimewa Daging</h3>
+                <p>Rp30.000 - Rp40.000</p>
+
+                <button onclick="tampilkanMartabak('istimewa')">
+                    Lihat Pilihan
+                </button>
+            </div>
+
+            <div class="category">
+                <h3>🥩 Super Daging</h3>
+                <p>Rp40.000 - Rp50.000</p>
+
+                <button onclick="tampilkanMartabak('super')">
+                    Lihat Pilihan
+                </button>
+            </div>
+
+            <div class="category">
+                <h3>🥩 Jumbo Daging</h3>
+                <p>Rp50.000 - Rp60.000</p>
+
+                <button onclick="tampilkanMartabak('jumbo')">
+                    Lihat Pilihan
+                </button>
+            </div>
+        </div>
+
+        <div class="detail" id="detailMartabak">
+            <h2 id="judulMartabak"></h2>
+
+            <div class="menu-list" id="listMartabak"></div>
+        </div>
+    </section>
+
+    <!-- PESANAN -->
+    <div class="pesanan">
+        🛒 Pesanan:
+        <span id="jumlah">0</span>
+        |
+        <a href="pesan.html">Lihat</a>
+    </div>
+
+    <!-- FOOTER -->
+    <footer>
+        © 2026 Martabak & Terang Bulan APPA
+    </footer>
+
+    <!-- JAVASCRIPT -->
+    <script>
+        const menuTerang = {
+            satuRasa: {
+                judul: "🍫 Terang Bulan - 1 Rasa",
+                data: [
+                    ["Kacang", 25000],
+                    ["Coklat", 25000],
+                    ["Oreo", 25000],
+                    ["Milo", 25000],
+                    ["Durian", 28000],
+                    ["Vanilla", 28000],
+                    ["Keju", 28000],
+                    ["Greentea", 28000]
+                ]
+            },
+
+            kombinasi: {
+                judul: "🥜 Terang Bulan - Kombinasi",
+                data: [
+                    ["Coklat Kacang", 30000],
+                    ["Coklat Oreo", 30000],
+                    ["Coklat Milo", 30000],
+                    ["Coklat Durian", 30000],
+                    ["Coklat Vanilla", 30000],
+                    ["Coklat Keju", 30000],
+                    ["Coklat Greentea", 30000],
+                    ["Durian Oreo", 30000],
+                    ["Durian Milo", 30000],
+                    ["Durian Keju", 30000],
+                    ["Durian Coklat Kacang", 33000],
+                    ["Durian Keju Coklat", 33000],
+                    ["Durian Keju Oreo", 33000],
+                    ["Durian Keju Kacang", 33000],
+                    ["Greentea Kacang", 30000],
+                    ["Greentea Milo", 30000],
+                    ["Greentea Coklat Kacang", 33000],
+                    ["Greentea Keju Coklat", 33000],
+                    ["Greentea Keju Oreo", 33000],
+                    ["Greentea Keju Kacang", 33000],
+                    ["Oreo Milo", 30000],
+                    ["Keju Kacang", 30000],
+                    ["Keju Milo", 30000],
+                    ["Keju Oreo", 30000],
+                    ["Keju Greentea", 30000],
+                    ["Keju Coklat Milo", 33000],
+                    ["Keju Kacang Coklat", 33000],
+                    ["Keju Oreo Milo", 33000],
+                    ["Keju Coklat Oreo", 33000],
+                    ["Vanilla Keju", 30000],
+                    ["Vanilla Coklat", 30000],
+                    ["Vanilla Milo", 30000],
+                    ["Vanilla Oreo", 30000],
+                    ["Vanilla Coklat Kacang", 33000],
+                    ["Vanilla Coklat Oreo", 33000],
+                    ["Vanilla Keju Coklat", 33000],
+                    ["Vanilla Keju Oreo", 33000],
+                    ["Vanilla Keju Kacang", 33000]
+                ]
+            },
+
+            spesial: {
+                judul: "⭐ Terang Bulan - Spesial",
+                data: [
+                    ["Choco Maltine", 33000],
+                    ["Silverqueen", 38000]
+                ]
+            }
+        };
+
+        const menuMartabak = {
+            special: {
+                judul: "🥩 Special Daging",
+                data: [
+                    ["Special Daging", 20000],
+                    ["Special Daging + Jamur", 25000],
+                    ["Special Daging + Sosis", 25000],
+                    ["Special Daging + Kornet", 25000]
+                ]
+            },
+
+            istimewa: {
+                judul: "🥩 Istimewa Daging",
+                data: [
+                    ["Istimewa Daging", 30000],
+                    ["Istimewa Daging + Jamur", 35000],
+                    ["Istimewa Daging + Sosis", 35000],
+                    ["Istimewa Daging + Kornet", 35000],
+                    ["Istimewa Daging + Jamur Sosis", 40000],
+                    ["Istimewa Daging + Jamur Kornet", 40000]
+                ]
+            },
+
+            super: {
+                judul: "🥩 Super Daging",
+                data: [
+                    ["Super Daging", 40000],
+                    ["Super Daging + Jamur", 45000],
+                    ["Super Daging + Sosis", 45000],
+                    ["Super Daging + Kornet", 45000],
+                    ["Super Daging + Jamur Sosis", 50000],
+                    ["Super Daging + Jamur Kornet", 50000]
+                ]
+            },
+
+            jumbo: {
+                judul: "🥩 Jumbo Daging",
+                data: [
+                    ["Jumbo Daging", 50000],
+                    ["Jumbo Daging + Jamur", 55000],
+                    ["Jumbo Daging + Sosis", 55000],
+                    ["Jumbo Daging + Kornet", 55000],
+                    ["Jumbo Daging + Jamur Sosis", 60000],
+                    ["Jumbo Daging + Jamur Kornet", 60000]
+                ]
+            }
+        };
+
+        let hargaDB = {};
+
+        async function loadHargaDB() {
+            try {
+                const response = await fetch("edit_harga.php");
+                const result = await response.json();
+
+                if (result.status) {
+                    hargaDB = result.data;
+                }
+            } catch (error) {
+                console.error(
+                    "Gagal mengambil harga dari MySQL:",
+                    error
+                );
+            }
+        }
+
+        function getHarga(nama, hargaDefault) {
+            if (hargaDB[nama] !== undefined) {
+                return Number(hargaDB[nama]);
+            }
+
+            return hargaDefault;
+        }
+
+        async function tampilkan(kategori) {
+            if (Object.keys(hargaDB).length === 0) {
+                await loadHargaDB();
+            }
+
+            const detail = document.getElementById("detailTerang");
+            const judul = document.getElementById("judulTerang");
+            const list = document.getElementById("listTerang");
+            const menu = menuTerang[kategori];
+
+            judul.textContent = menu.judul;
+            list.innerHTML = "";
+
+            menu.data.forEach(item => {
+                let harga = getHarga(item[0], item[1]);
+
+                list.innerHTML += `
+                    <div class="menu-item">
+                        <span>
+                            ${item[0]}<br>
+                            Rp${harga.toLocaleString("id-ID")}
+                        </span>
+
+                        <div>
+                            <button onclick="editHarga('${item[0]}', ${harga})">
+                                ✏️ Edit
+                            </button>
+
+                            <button onclick="pilihMenu('${item[0]}', ${harga})">
+                                Pilih
+                            </button>
+                        </div>
+                    </div>
+                `;
+            });
+
+            detail.style.display = "block";
+
+            detail.scrollIntoView({
+                behavior: "smooth"
+            });
+        }
+
+        async function tampilkanMartabak(kategori) {
+            if (Object.keys(hargaDB).length === 0) {
+                await loadHargaDB();
+            }
+
+            const detail = document.getElementById("detailMartabak");
+            const judul = document.getElementById("judulMartabak");
+            const list = document.getElementById("listMartabak");
+            const menu = menuMartabak[kategori];
+
+            judul.textContent = menu.judul;
+            list.innerHTML = "";
+
+            menu.data.forEach(item => {
+                let harga = getHarga(item[0], item[1]);
+
+                list.innerHTML += `
+                    <div class="menu-item">
+                        <span>
+                            ${item[0]}<br>
+                            Rp${harga.toLocaleString("id-ID")}
+                        </span>
+
+                        <div>
+                            <button onclick="editHarga('${item[0]}', ${harga})">
+                                ✏️ Edit
+                            </button>
+
+                            <button onclick="pilihMartabak('${item[0]}', ${harga})">
+                                Pilih
+                            </button>
+                        </div>
+                    </div>
+                `;
+            });
+
+            detail.style.display = "block";
+
+            detail.scrollIntoView({
+                behavior: "smooth"
+            });
+        }
+
+        function pilihMenu(nama, harga) {
+            let adonan = document.querySelector(
+                'input[name="adonan"]:checked'
+            );
+
+            if (!adonan) {
+                alert("Silakan pilih adonan terlebih dahulu!");
+                return;
+            }
+
+            let namaPesanan = nama + " - " + adonan.value;
+
+            let pesanan = JSON.parse(
+                localStorage.getItem("pesanan")
+            ) || [];
+
+            let item = pesanan.find(p => p.nama === namaPesanan);
+
+            if (item) {
+                item.jumlah++;
+            } else {
+                pesanan.push({
+                    nama: namaPesanan,
+                    harga: harga,
+                    jumlah: 1
+                });
+            }
+
+            localStorage.setItem("pesanan", JSON.stringify(pesanan));
+
+            hitungJumlah();
+
+            alert(namaPesanan + " berhasil ditambahkan!");
+        }
+
+        function pilihMartabak(nama, harga) {
+            let pesanan = JSON.parse(
+                localStorage.getItem("pesanan")
+            ) || [];
+
+            let item = pesanan.find(p => p.nama === nama);
+
+            if (item) {
+                item.jumlah++;
+            } else {
+                pesanan.push({
+                    nama: nama,
+                    harga: harga,
+                    jumlah: 1
+                });
+            }
+
+            localStorage.setItem("pesanan", JSON.stringify(pesanan));
+
+            hitungJumlah();
+
+            alert(nama + " berhasil ditambahkan!");
+        }
+
+        function hitungJumlah() {
+            let pesanan = JSON.parse(
+                localStorage.getItem("pesanan")
+            ) || [];
+
+            let jumlah = pesanan.reduce(
+                (total, item) => total + item.jumlah,
+                0
+            );
+
+            document.getElementById("jumlah").textContent = jumlah;
+        }
+
+        async function editHarga(nama, hargaLama) {
+            let hargaBaru = prompt(
+                "Edit harga " + nama + "\n\n" +
+                "Harga sekarang: Rp" +
+                hargaLama.toLocaleString("id-ID") +
+                "\n\nMasukkan harga baru:"
+            );
+
+            // Jika Cancel
+            if (hargaBaru === null) {
+                return;
+            }
+
+            // Ambil angka saja
+            hargaBaru = parseInt(
+                hargaBaru.replace(/\D/g, "")
+            );
+
+            // Cek harga
+            if (isNaN(hargaBaru) || hargaBaru <= 0) {
+                alert("Harga tidak valid!");
+                return;
+            }
+
+            try {
+                const formData = new FormData();
+
+                formData.append("nama", nama);
+                formData.append("harga", hargaBaru);
+
+                const response = await fetch(
+                    "edit_harga.php",
+                    {
+                        method: "POST",
+                        body: formData
+                    }
+                );
+
+                const result = await response.json();
+
+                if (result.status) {
+                    alert(
+                        "Harga " + nama +
+                        " berhasil diubah menjadi Rp" +
+                        hargaBaru.toLocaleString("id-ID")
+                    );
+
+                    // Ambil ulang harga dari database
+                    await loadHargaDB();
+
+                    // Tampilkan kembali harga terbaru
+                    location.reload();
+                } else {
+                    alert(result.pesan);
+                }
+            } catch (error) {
+                console.error(error);
+
+                alert(
+                    "Gagal menghubungkan ke server.\n\n" +
+                    "Pastikan Apache dan MySQL XAMPP aktif."
+                );
+            }
+        }
+
+        loadHargaDB().then(() => {
+            hitungJumlah();
+        });
+    </script>
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+    <script>
+        $(function() {
+            $(".section-title").on("click", function() {
+                $(this)
+                    .next(".category-grid")
+                    .slideToggle();
+            });
+        });
+    </script>
+
+    <!-- Bootstrap JavaScript -->
+    <script
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYWJrRrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous">
+    </script>
+</body>
+</html>
